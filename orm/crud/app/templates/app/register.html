@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action=" " method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="name" >Firstname:</label>
+                        <input type="text" name="firstname" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastname">Lastname:</label>
+                        <input type="text" name="lastname" id="lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="option">Gender:</label>
+                        <select name="gender" id="option">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="other">other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="contact">Conatct No:</label>
+                        <input type="number" name="contactno" id="contact">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="textboxin">Address:</label>
+                        <input type="textbox" name="address" id="textboxin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="text" id="" value="Register your details">
+                    </td>
+                </tr>
+            </table>
+    
+        </form>
+
+    </center>
+</body>
+</html>

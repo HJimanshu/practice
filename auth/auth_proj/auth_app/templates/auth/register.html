@@ -1,0 +1,44 @@
+{%extends 'layout/layout.html'%}
+{% block content%}
+<form action="{% url 'register' %}" method="POST">
+    {% csrf_token %} 
+    <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        <input type="text" class="form-control" name="{{ form.username.name }}" value="{{ form.username.value }}">
+        <span class="text-danger">{{ form.username.errors }}</span>
+    </div>
+    <div class="form-group">
+        <label for="{{ form.email.id_for_label }}">Email:</label>
+        <input type="email" class="form-control" name="{{ form.email.name }}" value="{{ form.email.value }}">
+        <span class="text-danger">{{ form.email.errors }}</span>
+    </div>
+    <div class="form-group">
+        <label for="{{ form.password1.id_for_label }}">Password:</label>
+        <input type="password" class="form-control" name="{{ form.password1.name }}" value="{{ form.password1.value }}">
+        <span class="text-danger">{{ form.password1.errors }}</span>
+    </div>
+    <div class="form-group">
+        <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+        <input type="password" class="form-control" name="{{ form.password2.name }}" value="{{ form.password2.value }}">
+        <span class="text-danger">{{ form.password2.errors }}</span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    <!-- {{ form.as_p }} -->
+</form>
+
+
+    <!-- <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+      </form> -->
+{%endblock%}
